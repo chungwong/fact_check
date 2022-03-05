@@ -1,19 +1,18 @@
 # FactCheck
 
-To start your Phoenix server:
+To start
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+```bash
+git clone https://github.com/chungwong/fact_check.git
+cd fact_check
+mix deps.get
+mix ecto.create
+mix ecto.migrate
+iex -S mix phx.server
+```
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+## API endpoints
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+1. To get a random fact, http://localhost:4000/fact/random
+2. To get a fact by its `known id`, http://localhost:4000/fact/id/10aa91eb-13eb-41e9-ac59-454604cc9a88
+3. To get a stat on the endpoints, http://localhost:4000/fact/stat

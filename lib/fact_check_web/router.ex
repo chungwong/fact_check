@@ -17,7 +17,9 @@ defmodule FactCheckWeb.Router do
   scope "/", FactCheckWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/fact/random", FactController, :get_random
+    get "/fact/id/:id", FactController, :get_fact
+    get "/fact/stat", FactController, :stat
   end
 
   # Other scopes may use custom stacks.

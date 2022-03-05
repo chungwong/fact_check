@@ -32,3 +32,5 @@ fact_check-*.tar
 npm-debug.log
 /assets/node_modules/
 
+# vim
+*.sw[p|o]

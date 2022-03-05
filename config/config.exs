@@ -47,6 +47,9 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+# set timestamps to `:timestamptz`(with timezone)
+config :fact_check, FactCheck.Repo, migration_timestamps: [type: :timestamptz]
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{config_env()}.exs"
